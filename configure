@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 #
 # qemu configure script (c) 2003 Fabrice Bellard
 #
