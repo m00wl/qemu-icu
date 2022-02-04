@@ -3,6 +3,10 @@
 #include "hw/sysbus.h"  /* for sysbus register functions */
 #include "hw/misc/icu.h"
 
+#define TYPE_ICU "icu_rom"
+typedef struct IcuState IcuState;
+DECLARE_INSTANCE_CHECKER(IcuState, ICU, TYPE_ICU)
+
 #define KEY     0xC0FFEE
 #define REG_ID  0x0
 #define REG_KEY 0x8
@@ -62,7 +66,7 @@ static void icu_register_types(void)
 }
 type_init(icu_register_types)
 
-/* function to create to ICU device */
+/* function to create the ICU device */
 DeviceState *icu_create(hwaddr addr)
 {
     DeviceState *dev = qdev_new(TYPE_ICU);
