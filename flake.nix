@@ -51,6 +51,8 @@
           pkgs.libseccomp
           pkgs.libxkbcommon
           pkgs.libiscsi
+
+          pkgs.gdb
         ];
       };
 
